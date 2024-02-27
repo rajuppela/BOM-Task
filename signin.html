@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-in</title>
+</head>
+<body>
+    <script>
+        var a = prompt('username');
+        var b = prompt('password');
+        var c = localStorage.getItem('uname');
+        var d = localStorage.getItem('password');
+        if (a == c && b == d)
+        {
+            document.writeln('<h1>signed-in successfully</h1>');
+           var data =  document.createElement('table');
+           document.body.appendChild(data);
+           var row1 = document.createElement('tr');
+           data.appendChild(row1);
+           var c1 = document.createElement('td');
+           row1.appendChild(c1);
+           var c2 = document.createElement('td');
+           row1.appendChild(c2);
+           var row2 = document.createElement('tr');
+           data.appendChild(row2);
+           var c3 = document.createElement('td');
+           row2.appendChild(c3);
+           var c4 = document.createElement('td');
+           row2.appendChild(c4);
+           c1.innerText = 'username:';
+           c2.innerText = c;
+           c3.innerText = 'password:';
+           c4.innerText = d;
+           c1.style.color = 'blue';
+           c2.style.color = 'red';
+           c3.style.color = 'green';
+           c4.style.color = 'magenta';
+        }
+        else
+        {
+            document.writeln('<h1>invalid username or password</h1>');
+        }
+    </script>
+</body>
+</html>
